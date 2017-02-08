@@ -12,5 +12,4 @@ php artisan make:auth
 
 準備管理介面的JS/CSS
 npm install
-npm install gulp
-npm run dev
+npm run production
