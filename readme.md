@@ -6,3 +6,6 @@ php artisan passport:install
 
 創建客戶端指令 方便測試
 php artisan passport:client
+
+加入管理介面
+php artisan make:auth
