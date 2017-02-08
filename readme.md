@@ -9,3 +9,8 @@ php artisan passport:client
 
 加入管理介面
 php artisan make:auth
+
+準備管理介面的JS/CSS
+npm install
+npm install gulp
+npm run dev
