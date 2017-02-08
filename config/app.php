@@ -179,6 +179,9 @@ return [
 
         // Passport Service Providers...
         Laravel\Passport\PassportServiceProvider::class,
+        
+        // PrettyRoutes
+        PrettyRoutes\ServiceProvider::class,
 
     ],
 
