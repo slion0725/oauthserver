@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// 部份符合
+Route::middleware(['auth:api','scope:profile,test'])->
+get('/profile_scope', function (Request $request) {
+    return $request->user();
+});
+
+// 全部符合
+Route::middleware(['auth:api','scopes:profile'])->
+get('/profile_scopes', function (Request $request) {
+    return $request->user();
+});
