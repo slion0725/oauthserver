@@ -31,9 +31,10 @@ class AuthServiceProvider extends ServiceProvider
         // Token Lifetimes 限制時效性
         Passport::tokensExpireIn(Carbon::now()->addDays(15));
         Passport::refreshTokensExpireIn(Carbon::now()->addDays(30));
-
+        // 受權項目
         Passport::tokensCan([
-            'profile' => 'check user profile'
+            'profile' => 'check user profile',
+            'test'=> 'for test'
         ]);
     }
 }
