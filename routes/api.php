@@ -24,7 +24,7 @@ get('/profile_scope', function (Request $request) {
 });
 
 // 全部符合
-Route::middleware(['auth:api','scopes:profile'])->
+Route::middleware(['auth:api','scopes:profile,test'])->
 get('/profile_scopes', function (Request $request) {
     return $request->user();
 });
