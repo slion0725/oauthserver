@@ -28,6 +28,8 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Passport::routes();
+        // Implicit Grant Tokens
+        Passport::enableImplicitGrant();
         // Token Lifetimes 限制時效性
         Passport::tokensExpireIn(Carbon::now()->addDays(15));
         Passport::refreshTokensExpireIn(Carbon::now()->addDays(30));
